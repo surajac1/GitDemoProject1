@@ -7,5 +7,6 @@ public interface HomeService {
 	Employee saveData(Employee e);
 
 	Employee getData(int id);
+	public List<Employee> getAllData();
 
 }

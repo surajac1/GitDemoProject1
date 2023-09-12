@@ -44,4 +44,16 @@ public ResponseEntity<Employee> updateData(@RequestBody Employee e){
 	Employee emp=hs.saveData(e);
 	return new ResponseEntity<Employee>(emp, HttpStatus.CREATED); 
 }
+
+@GetMapping("/getDataAll")
+public ResponseEntity<List<Employee>> getDataAll()
+{
+	List<Employee> emp=hs.getAllData();
+	return new ResponseEntity<List><Employee>>(emp, HttpStatus.OK);
+	
+	
+	
+}
+
+
 }
