@@ -39,5 +39,9 @@ public class HomeController {
 		
 	}
 	
-
+@PutMapping("/updatedata")
+public ResponseEntity<Employee> updateData(@RequestBody Employee e){
+	Employee emp=hs.saveData(e);
+	return new ResponseEntity<Employee>(emp, HttpStatus.CREATED); 
+}
 }
